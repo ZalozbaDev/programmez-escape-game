@@ -4,12 +4,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "vite",
+    "devpublic": "vite --host --https",
     "start": "vite",
     "build": "tsc && vite build",
     "prod": "vite preview"
   },
   "devDependencies": {
     "@types/node": "^18.15.11",
+    "@vitejs/plugin-basic-ssl": "^1.0.1",
     "@workadventure/iframe-api-typings": "^1.15.10",
     "typescript": "^5.0.4",
     "vite": "^4.3.2",

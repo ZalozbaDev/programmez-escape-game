@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import { getMaps, getMapsOptimizers, getMapsScripts } from "wa-map-optimizer-vite";
+import basicSsl from '@vitejs/plugin-basic-ssl'
 
 const maps = getMaps();
 
@@ -13,7 +14,7 @@ export default defineConfig({
             },
         },
     },
-    plugins: [...getMapsOptimizers(maps)],
+    plugins: [...getMapsOptimizers(maps),basicSsl()],
     server: {
         host: "localhost",
         headers: {
